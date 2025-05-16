@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Salimar Fire</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+   <header>
+    <nav>
+  <a href="index.html" class="home-link">New Salimar Fire</a> 
+
+  <input type="checkbox" id="sidebar-active">
+  <label for="sidebar-active" class="open-sidebar-button">
+    <!-- Hamburger Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+      <path d="M120-240v-80h720v80h120Zm0-200v-80h720v80h120Zm0-200v-80h720v80h120Z"/>
+    </svg>
+  </label>
+
+  <label id="overlay" for="sidebar-active"></label>
+
+  <div class="links-container">
+    <label for="sidebar-active" class="close-sidebar-button">
+      <!-- Close Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+      </svg>
+    </label>
+
+    <a href="index.html">Home</a>
+    <a href="products.html">Fire Extinguisher</a>
+    <a href="services.html">Refilling Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+  </header>
+
+  <main class="services-page">
+    <h1>Book Your Fire Extinguisher Refill</h1>
+
+    <form action="https://formspree.io/f/xdkgboyz" method="POST" class="service-booking-form">
+  <!-- Customer Info -->
+  <section class="customer-info">
+    <h2>Customer Details</h2>
+
+    <label for="name">Name / Company Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="_replyto" required>
+
+    <label for="phone">Mobile / WhatsApp Number</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="address">Full Address</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+  </section>
+
+  <!-- Fire Extinguisher Info -->
+  <section class="extinguisher-info">
+    <h2>Fire Extinguishers to Refill</h2>
+
+    <!-- Entry 1 -->
+     <div class="product-block">
+    <label for="type">Type </label>
+    <select id="type" name="extinguisher_type">
+      <option value="">--Select-- </option>
+      <option value="abc">ABC </option>
+      <option value="co2">CO2</option>
+      <option value="foam">AFFF Foam</option>
+      <option value="dcp">DCP</option>
+      <option value="water">Water CO2</option>
+    </select>
+    <label for="capacity">Capacity</label>
+    <input type="number and text" id="capacity" name="capacity">
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity_" min="1" value="1">
+     </div>
+
+     <div id="additionalBlocks"></div>
+      <button class="add_btn" type="button" onclick="addProductBlock()">Add More</button>
+    <br><br>
+
+   
+  </section>
+
+  <!-- Summary & Submit -->
+  <div class="booking-summary">
+    <p><strong>Request:</strong> Fire Extinguisher Refill Quotation</p>
+    <p><strong>Note:</strong> You will be contacted with pricing details.</p>
+  </div>
+
+  <button type="submit" class="btn">Get Quotation</button>
+</form>
+
+<div id="confirmation-message" style="display:none; text-align:center; margin-top:20px; font-weight:bold; color:green;">
+  Your Request is submitted. You will receive it via mail or WhatsApp.
+  <br><br>
+  <button onclick="goBack()" class="btn">Go Back</button>
+</div>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 New Salimar Fire. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
